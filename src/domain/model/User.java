@@ -35,4 +35,14 @@ public class User {
     public boolean isUnderage() {
         return Period.between(birthDate, LocalDate.now()).getYears() < 18;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDate=" + birthDate +
+                '}';
+    }
 }
